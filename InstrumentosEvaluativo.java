@@ -15,15 +15,85 @@ public class InstrumentosEvaluativo {
 			InstrumentosEvaluativo iniciar= new InstrumentosEvaluativo();
 			
 			iniciar.ProductoYCantidades();
-			iniciar.RegistrarProductos();
-			iniciar.consultarProductoYUnidades();
-			iniciar.ActualizarUnidades();
+			
+			  int codMenuPpal=0;
+		        
+				do {
+					
+					String menu="Menu del sistema\n\n";
+					menu+="1. Agregar Producto \n";
+					menu+="2. Buscar Producto\n";
+					menu+="3. Actualizar cantidad de Producto\n";
+					menu+="4. Eliminar Producto\n";
+					menu+="5. Mostrar Inventario\n";
+					menu+="6. Salir\n\n";
+					menu+="Por favor Seleccione una opcion \n";
+				
+					codMenuPpal=Integer.parseInt(JOptionPane.showInputDialog(menu));
+					
+					switch (codMenuPpal) {
+					case 1:
+						
+						JOptionPane.showMessageDialog(null,"Registrar Producto" );
+						iniciar.RegistrarProductos();
+						iniciar.consultarProductoYUnidades();
+						break;
+					case 2:
+						
+						JOptionPane.showMessageDialog(null,"Buscar Producto" );
+						iniciar.consultarProducto();
+						
+						break;
+					case 3:
+						
+						
+						JOptionPane.showMessageDialog(null,"Actualizar cantidad Producto" );
+							
+							iniciar.ActualizarUnidades();
+							iniciar.consultarProductoYUnidades();
+					
+					
+						
+						break;
+					case 4:
+						
+						JOptionPane.showMessageDialog(null,"Eliminar Producto" );
+						
+						
+						break;
+					case 5:
+						
+						JOptionPane.showMessageDialog(null,"Mostrar Inventario" );
+						
+						
+						break;
+					case 6:
+						
+						JOptionPane.showMessageDialog(null,"Consulta de Estudiante" );
+						
+						 
+						break;
+					
+					default:
+						
+						JOptionPane.showMessageDialog(null,"No corresponde a un "
+								+ "codigo valido","ADVERTENCIA",JOptionPane.WARNING_MESSAGE );
+						break;
+							
+					}
+					
+				}while(codMenuPpal !=6);
+				
+		        
+		       
+		    }
+			
 		
 			
-			System.out.println(listProductos);
 			
 			
-		}
+			
+		
 		
 		
 		public void ProductoYCantidades() {
@@ -99,35 +169,21 @@ public class InstrumentosEvaluativo {
 	        	
 	        }
 	    
-	/*	
 		private void consultarProducto() {
-	    	System.out.print("\n<<<Consulta de Producto >>>");
-	    	String nombre=JOptionPane.showInputDialog("Ingrese el nombre del producto a consultar");
+	    	System.out.print("\n<<< Consulta de Producto >>> \n");
+	    	String nombre=JOptionPane.showInputDialog("Ingrese el nombre del producto para saber"
+	    			+ " la cantidad de unidades asociados");
 	    	
-	    	
-	    		
-	    		if(listProductos.contains(nombre)) {
-	    			for(int j=0;j<listProductos;j++) {
-	    			ArrayList<Integer> listProductoTemporal=listCantidadesProducto.get(j);
-	    			
-	    			System.out.print("\nEl Producto : "+nombre+ " = ");
-	    			System.out.print("[");
-	    			for(int i=0;i<listProductoTemporal.size();i++) {
-	    				System.out.print(listProductoTemporal.get(i));
-	    				
-	    				if(i<listProductoTemporal.size()-1) {
-	    					System.out.println(",");
-	    					
-	    				}
-	    				
-	    			}
-	    			System.out.print("]\n");
-	    		}else {
-	    			System.out.println("No se encuentra el producto "+nombre);
-	    		}
-	    		
+	    	if(listProductos.contains(nombre)) {
+	    		int posicion=listProductos.indexOf(nombre);
+	    		int listaTemporal= listCantidadesProducto.get(posicion);
+	    		System.out.println("La cantidad de unidades para el producto son: "+nombre+""
+	    				+ " es "+listaTemporal);
+	    	}else {
+	    		System.out.println("No se encuentra producto "+nombre+ "\n");
 	    	}
-	    */
+	    	
+	    }
 		
 		
 
