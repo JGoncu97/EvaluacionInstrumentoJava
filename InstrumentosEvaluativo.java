@@ -140,7 +140,7 @@ public class InstrumentosEvaluativo {
 		/*Actualiza las unidades , segun la posicion del producto, utilizamos un ciclo para recorrer  la cadena*/
 		
 		private void ActualizarUnidades() {
-	        System.out.println("\n<<<Registro de  unidades de los productos >>>\n");
+	        System.out.println("\n<<<Actualizar  unidades de los productos >>>\n");
 	        for (int i = 0; i < listProductos.size(); i++) {
 	            JOptionPane.showMessageDialog(null, "Ingrese las unidades para "
 	            		+ "el producto " + listProductos.get(i));
@@ -154,7 +154,7 @@ public class InstrumentosEvaluativo {
 	        System.out.println("Registro de unidades exitoso!!");
 	    }
 		
-		
+		//Muestra de producto segun su operacion
 		private void consultarProductoYUnidades() {
 	        System.out.println("\n<<<Lista de Productos y unidades>>>\n");
 	        int listaTemporal;
@@ -168,7 +168,7 @@ public class InstrumentosEvaluativo {
 	        	}
 	        	
 	        }
-	    
+	    //Consultar Productos solicitando nombre
 		private void consultarProducto() {
 	    	System.out.print("\n<<< Consulta de Producto >>> \n");
 	    	String nombre=JOptionPane.showInputDialog("Ingrese el nombre del producto para saber"
@@ -183,6 +183,23 @@ public class InstrumentosEvaluativo {
 	    		System.out.println("No se encuentra producto "+nombre+ "\n");
 	    	}
 	    	
+	    }
+		
+		
+		private void BorrarUnidades() {
+	        System.out.println("\n<<<Borrar productos >>>\n");
+	        
+	            
+	            Integer producto =Integer.parseInt(JOptionPane.showInputDialog("Ingrese el producto que desea borrar  "));
+	            for (int i = 0; i < listProductos.size(); i++) {
+	            if(int prod : lisProductos) {
+	            	listProductos.remove(i)
+	            }
+
+	            
+	          
+	        
+	        System.out.println("Registro de unidades exitoso!!");
 	    }
 		
 		
