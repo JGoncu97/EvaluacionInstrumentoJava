@@ -177,8 +177,8 @@ public class InstrumentosEvaluativo {
 	    	if(listProductos.contains(nombre)) {
 	    		int posicion=listProductos.indexOf(nombre);
 	    		int listaTemporal= listCantidadesProducto.get(posicion);
-	    		System.out.println("La cantidad de unidades para el producto son: "+nombre+""
-	    				+ " es "+listaTemporal);
+	    		System.out.println("El producto : "+nombre+""
+	    				+ " tiene las siguientes unidades "+listaTemporal);
 	    	}else {
 	    		System.out.println("No se encuentra producto "+nombre+ "\n");
 	    	}
